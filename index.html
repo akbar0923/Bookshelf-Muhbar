@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf Apps | Dicoding</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="head_bar">
+      <nav>
+        <h1 class="title">Bookshelf Apps</h1>
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#input_section">Add Book</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">About</a></li>
+          <li><button id="btn-login" type="submit">Sign In</button></li>
+          <li><button id="searchSubmit" type="submit">Sign Up</button></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home">
+        <div class="container">
+          <div>
+            <h1>Organize Your<span> Book</span> Data</h1>
+            <p>This website allows you to add your book data to shelves, move it between shelves, and delete it from shelves.</p>
+            <form id="searchBook">
+              <div class="searchInput">
+                <input id="searchBookTitle" type="text" placeholder="Find your book here" />
+                <button id="searchSubmit" type="submit">Search Book</button>
+              </div>
+            </form>
+          </div>
+          <div class="image">
+            <img src="assets/assets/book.png" alt="Book" />
+          </div>
+        </div>
+      </section>
+
+      <section id="input_section">
+        <div class="container">
+          <div class="box">
+            <h2>Enter your book data</h2>
+            <form id="inputBook">
+              <div class="input">
+                <input id="inputBookTitle" type="text" required />
+                <span></span>
+                <label for="inputBookTitle">Title</label>
+              </div>
+              <div class="input">
+                <input id="inputBookAuthor" type="text" required />
+                <span></span>
+                <label for="inputBookAuthor">Author</label>
+              </div>
+              <div class="input">
+                <input id="inputBookYear" type="number" required />
+                <span></span>
+                <label for="inputBookYear">Year</label>
+              </div>
+              <div class="input_inline">
+                <label for="inputBookIsComplete">Done reading</label>
+                <input id="inputBookIsComplete" type="checkbox" />
+              </div>
+              <button id="bookSubmit" type="submit">Put the book on the shelf</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="book_shelf">
+        <div class="container">
+          <div class="incompleteBox">
+            <h2>Incomplete Reading</h2>
+            <div id="incompleteBookshelfList"></div>
+          </div>
+        </div>
+
+        <div class="container2">
+          <div class="completeBox">
+            <h2>Complete Reading</h2>
+            <div id="completeBookshelfList"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Copyright &copy; 2023 Muhammad Akbar - Dicoding</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

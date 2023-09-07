@@ -1,0 +1,459 @@
+/* Import Font dari Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&family=Poppins:wght@400;700&display=swap");
+
+/* Variabel Kustom (Custom Properties) */
+:root {
+  --main-color: #f8ede3; /* Warna utama */
+  --second-color: #dfd3c3; /* Warna kedua */
+  --dark-first: #c0a797; /* Warna gelap pertama */
+  --dark-second: #594d45; /* Warna gelap kedua */
+}
+
+/* Pengaturan Umum pada Body */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Pengaturan Navigasi (Navigation Bar) */
+nav {
+  background-color: var(--second-color); /* Latar belakang navigasi */
+  color: #fff; /* Warna teks navigasi */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  width: 100%;
+}
+
+.nav-list {
+  list-style: none;
+  margin-right: 90px;
+  display: flex;
+  gap: 50px; /* Jarak antara item navigasi */
+}
+
+.nav-list li {
+  display: inline;
+  margin-top: 4px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s; /* Efek transisi warna saat hover */
+}
+
+.nav-list a:hover {
+  color: var(--main-color); /* Warna saat hover */
+}
+
+/* Pengaturan Teks Utama (Headings dan Paragraf) */
+h1,
+h2 {
+  color: var(--dark-first);
+}
+
+p {
+  color: var(--dark-second);
+}
+
+/* Pengaturan Kontainer (Container) */
+.container {
+  width: 100%;
+  max-width: 992px;
+  margin: auto;
+  box-sizing: border-box;
+  display: flex;
+}
+
+/* Tombol Utama */
+.btn-main {
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem 1rem;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 0.3rem;
+  margin: 0 0.2rem;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn-main:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+#btn-login {
+  background-color: var(--second-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  overflow: hidden;
+  border: 2px solid var(--second-color);
+  margin-left: -4px;
+}
+
+#btn-login:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Pengaturan Header */
+.head_bar {
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--second-color);
+  width: 100%;
+}
+
+.title {
+  font-size: 2em;
+  color: var(--dark-first);
+  font-family: "Merriweather", serif;
+  margin-right: 365px;
+}
+
+/* Pengaturan Bagian "Home" */
+#home {
+  display: flex;
+  align-items: center;
+  background-color: var(--second-color);
+}
+
+#home .container {
+  padding: 3rem 2rem;
+  flex: 1;
+}
+
+#home > .container > div {
+  width: 60%;
+}
+
+#home h1 {
+  font-size: 4em;
+  line-height: 1em;
+  margin-bottom: 2rem;
+}
+
+#home h1 span {
+  color: var(--main-color);
+}
+
+#home .image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#home img {
+  width: 90%;
+}
+
+/* Pengaturan Bagian "Input Section" */
+#input_section {
+  background-color: white;
+}
+
+#input_section .container {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#input_section .box {
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  border: 3px solid var(--second-color);
+}
+
+#input_section h2 {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid silver;
+}
+
+#input_section form {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.input {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+
+.input input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.input label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input span::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--dark-first);
+  transition: 0.5s;
+}
+
+.input input:focus ~ label,
+.input input:valid ~ label {
+  top: -5px;
+  color: var(--dark-first);
+}
+
+.input input:focus ~ span::before,
+.input input:valid ~ span::before {
+  width: 100%;
+}
+
+.input_inline {
+  margin: -5px 0 20px 5px;
+  color: #a6a6a6;
+}
+
+#bookSubmit {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background: var(--second-color);
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  margin: 20px 0;
+}
+
+#bookSubmit:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Pengaturan Bagian "Search Section" */
+#search_section {
+  background-color: var(--second-color);
+}
+
+#search_section .container {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#search_section h2 {
+  text-align: center;
+  padding: 10px 0;
+}
+
+#searchBookTitle {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  outline: none;
+  width: 250px;
+}
+
+#searchSubmit {
+  background-color: var(--dark-first);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  overflow: hidden;
+  border: 2px solid var(--dark-first);
+  margin-left: -4px;
+  font-family: "Poppins";
+}
+
+#searchSubmit:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Pengaturan Bagian "Book Shelf" */
+#book_shelf {
+  display: flex;
+  padding: 0px 300px 0px 300px;
+}
+
+#book_shelf .container {
+  padding: 3rem 2rem;
+  display: flex;
+}
+
+#book_shelf .container2 {
+  padding: 3rem 2rem;
+  display: flex;
+}
+
+#book_shelf h2 {
+  text-align: center;
+}
+
+/* Pengaturan Kotak Buku (Incomplete dan Complete) */
+#book_shelf .incompleteBox {
+  width: 400px;
+  background: white;
+  padding: 10px;
+}
+
+#book_shelf .completeBox {
+  width: 400px;
+  background: white;
+  padding: 10px;
+}
+
+.book_item {
+  background: var(--dark-second);
+  border-radius: 10px;
+  margin-top: 25px;
+  margin: 20px;
+  padding: 12px 24px 12px 24px;
+  border: 2px solid var(--main-color);
+}
+
+.book_item h3,
+.book_item p {
+  color: white;
+  margin: 0;
+}
+
+.book-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.action {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.complete-button {
+  width: 40px;
+  height: 40px;
+  background: url("/assets/assets/complete-outline.png");
+  background-size: contain;
+  cursor: pointer;
+  border: none;
+  margin-left: auto;
+  font-size: 3rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+.complete-button:hover {
+  background: url("/assets/assets/complete-fill.png");
+  background-size: contain;
+}
+
+.undo-button {
+  width: 40px;
+  height: 40px;
+  background: url("/assets/assets/undo.png");
+  background-size: contain;
+  cursor: pointer;
+  border: none;
+  margin-left: auto;
+  font-size: 3rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+.undo-button:hover {
+  transform: rotate(-360deg);
+}
+
+.delete-button {
+  width: 40px;
+  height: 40px;
+  background: url("/assets/assets/x-outline.svg");
+  background-size: contain;
+  cursor: pointer;
+  border: none;
+  margin-left: auto;
+  font-size: 3rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+.delete-button:hover {
+  background: url("/assets/assets/x.svg");
+  background-size: contain;
+}
+
+/* Pengaturan Footer */
+footer {
+  background-color: var(--second-color);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/* Media Query untuk Layar Kecil (Mobile) */
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+  }
+
+  #home > .container > div {
+    width: 100%;
+  }
+
+  #home img {
+    width: 100%;
+  }
+
+  #input_section .box {
+    width: 100%;
+  }
+
+  #book_shelf .container {
+    padding: 2rem 1rem;
+  }
+
+  #book_shelf .incompleteBox,
+  #book_shelf .completeBox {
+    width: 100%;
+  }
+}
